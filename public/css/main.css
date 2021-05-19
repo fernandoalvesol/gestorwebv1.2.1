@@ -1,0 +1,271 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/09/2019, 21:56:29
+    Author     : fernando
+    */
+
+
+/*
+Estilo de botoes
+*/
+
+.meu-login{
+    background: url('https://images.unsplash.com/photo-1544614463-88b0c990b4c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1398&q=80') no-repeat center center fixed !important; 
+    -webkit-background-size: cover  !important;
+     -moz-background-size: cover  !important;
+     -o-background-size: cover  !important;
+     background-size: cover  !important;
+ }
+ 
+ .btn-insert{
+     background: #3c8cbc;
+     margin: 3px -1px 3px -10px;
+     padding: 8px 18px 9px 12px;
+     border-radius: 2px;
+     color: #fff;
+     font-size: 17px;
+ }
+ 
+ .btn-pesquisar-renovar{
+     
+     
+ }
+ 
+ 
+ .btn-insert-assoc{
+     background: #3c8cbc;
+     margin: 8px 0px 3px -13px;
+     padding: 11px 22px 11px 11px;
+     border-radius: 2px;
+     color: #fff;
+     font-size: 17px;
+ }
+ 
+ .btn-enviar{
+     background: #3c8cbc;
+     color: #fff;
+     margin: -5px 11px 6px 1px;
+     padding: 6px 20px 10px 22px;
+     font-size: 19px;
+     width: 100%;
+ }
+ 
+ .btn-cad-user{margin: 1px 1px -6px 30px;padding: 9px 29px 8px 30px;color: #fff;font-weight: BOLD;background: #3c8dbc;}
+ 
+ .btn-buscar{
+     padding: 5px 5px 5px 9px;
+     width: 50%;
+     margin: 26px 8px 12px;
+     background: #7c9fae;
+     color: #fff;
+     width: 100%;
+ }
+ 
+ .btn-extrato{
+     margin: -2px 9px 10px 16px;
+     padding: 10px 41px 13px 35px;
+     color: #fff;
+     background: #3c8dbc;
+ }
+ 
+ 
+ .exibir_conteudo{
+     background: #3c8cbc;
+     color: #fff;
+     padding: 5px 13px 5px 9px;
+     border-radius: 24px;
+     width: 10%;
+ }
+ .editar_conteudo{
+     background: #0bd05e;
+     margin: 7px 9px 8px 0px;
+     padding: 5px 9px 6px 13px;
+     border-radius: 5px;
+     color: #ecf0f5;
+ }
+ .veiculo_conteudo{
+     background: #f95401;
+     margin: 1px -5px 3px 0px;
+     padding: 5px 19px 5px;
+     border-radius: 5px;
+     color: #ecf0f5;
+ }
+ .remover_conteudo{
+     background: #f10f0f;
+     color: #fff;
+     margin: 6px;
+     padding: 6px;
+     border-radius: 5px;
+ }
+ 
+ .del-modal{
+     
+     font-size: 25px;
+     padding: 10px 12px 12px;
+     text-align: center;
+ }
+ 
+ .title{
+     margin: -17px 9px 15px 1px;
+     padding: 7px 8px 10px 3px;
+ }
+ .title-pg{
+     padding: 14px 2px;
+     float: left;
+ }
+ 
+ .form-search{
+     padding: 1px 1px 19px 3px;
+     float: left;
+ }
+ 
+ .bloco-home{
+     padding: 15px 25px 18px 18px;
+     margin: 23px 10px 9px 0px;
+ }
+ 
+ .tabela{
+     font-size: 13px;
+     text-align: left;
+     width: 105%;
+     max-width: 100%;
+     padding: 8px 8px 10px 10px;
+     margin: 11px 9px 10px 16px;
+ }
+ 
+ 
+ .formulario{
+     float: right;
+     margin: 7px 8px 7px 17px;
+ }
+ 
+ .formulario-caduser{
+     margin: 4px 1px 0px 18px;
+     padding: 11px 8px 8px 8px;
+ }
+ 
+ .formulario-extrato{
+     float: left;
+     margin: 1px 50px 0px -15px;
+     padding: 4px 6px 1px 5px;
+ }
+ 
+ .form-entradas{
+     margin-left: -65px;
+ }
+ 
+ .del-icones{
+     text-align: center;
+     font-size: 80px;
+     color: #e80e0e;
+ }
+ 
+ .indicadores{
+     
+     font-size: 1.2em;
+     padding: 5px 7px;
+ }
+ 
+ .titulo-home{
+     font-size: 30px;
+     padding: 12px 9px;
+     text-align: left;
+     background-color: #3c8dbc;
+     text-align: center;
+     padding: 12px 10px 10px 0px;
+     border-radius: 7px;
+     color: #fff;
+ }
+ 
+ .sub-titulo-user{
+     text-align: right;
+     margin: 8px 8px 13px 7px;
+     font-size: 16px;
+ }
+ 
+ .topo-dashboard{
+     margin: 27px 8px 8px 5px;
+ }
+ 
+ .menu-table{
+     font-size: 13px;
+ }
+ 
+ .btn-acessar{
+     padding: 10px 20px 14px 16px;
+     margin: 3px 29px 10px 12px;
+     background: #354c7e;
+     text-align: center;
+     border-radius: 6px;
+     color: #fff;
+ }
+ 
+ .btn-cad{
+     margin: -1px 3px 21px 28px;
+ }
+ 
+ .voltar-lista-adesao{
+     margin: 7px 7px 12px 34px;
+ }
+ 
+ .rodape-text{
+     margin: -8px -1px 2px 0px;
+     padding: 2px 10px 8px 8px;
+     font-size: medium;
+ }
+ 
+ .relatorio-btn{
+     float: right;
+     font-size: 21px;
+     padding: 7px 10px;
+     margin: 18px 12px;
+ }
+ 
+ 
+ .icone-alerta{text-align: center;font-size: 107px;color: #e80c0c;}
+ 
+ .voltar-associado{
+     margin: 0px 3px -5px 17px;
+ }
+ 
+ .voltar-filial{
+     margin: -1px 2px 11px 17px;
+ }
+ 
+ 
+ .box-entradas{
+     padding: 0px 0px 4px 2px;
+     margin: -4px 17px -7px 10px;
+ }
+ 
+ .box-saidas{
+     padding: 1px 1px 1px 0px;
+     margin: -4px 5px 5px 5px;
+ }
+ .box-saldo{
+     padding: 0px 0px 0px 6px;
+     margin: -3px 2px 2px 10px;
+ }
+ 
+ .entradas-text{
+     text-align: center;
+ }
+ .saidas-text{
+     text-align: center;
+ }
+ .saldo-text{
+     text-align: center;
+ }
+ .material{
+    margin: 8px 12px 14px 32px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bnt-excluir-cobranca{
+    text-align: center;
+}

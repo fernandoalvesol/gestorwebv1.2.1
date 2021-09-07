@@ -5,6 +5,7 @@ namespace App;
 use App\Models\Permission;
 use App\Models\Role;
 use App\Models\Filial;
+use App\Models\Renovar;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -32,6 +33,11 @@ class User extends Authenticatable {
 
     public function caixas() {
 
+        return $this->hasMany(User::class, 'users_id');
+    }
+    
+    public function renovar(){
+        
         return $this->hasMany(User::class, 'users_id');
     }
 

@@ -30,7 +30,7 @@
                 </a>      
             </div>
             <div class="col-md-3">
-                <span>Digite a data da Renovação</span>
+                <span>Digite Renovação / Atendimento</span>
                 <div class="form-search">
                     {!! Form::open(['route' => 'renovar.search', 'class' => 'form form-inline']) !!}
                     {!! Form::date('key-search', null, ['class' => 'form-control']) !!}
@@ -52,7 +52,9 @@
                 <div class="form-search">
                     {!! Form::open(['route' => 'renovar.search', 'class' => 'form form-inline']) !!}
                     {!! Form::select('key-search', ['placeholder' => 'Escolha uma Opção', 
-                                'RENOVADO' => 'RENOVADO', 'A RENOVAR'=>'A RENOVAR'])
+                                'RENOVADO' => 'RENOVADO', 'A RENOVAR'=>'A RENOVAR',
+                                'CANCELADO'=>'CANCELADO', 'AGUARDANDO'=>'AGUARDANDO',
+                                'SEM CONTATO'=>'SEM CONTATO'])
                                 !!}
                     {!! Form::submit('Pesquisar', ['class' => 'btn']) !!}
                     {!! Form::close() !!}
@@ -71,7 +73,8 @@
                                 <th>Placa</th>
                                 <th>Valor Mensalidade</th>
                                 <th>Valor Renovação</th>
-                                <th>Data</th>
+                                <th>Data Renovação</th>
+                                <th>Data Atendimento</th>
                                 <th>Atendente</th>
                                 <th>Rastredor</th>
                                 <th>Status</th>
@@ -85,7 +88,8 @@
                                 <td>{{$renova->placa}}</td>
                                 <td>R$ &nbsp;{{$renova->valor_mensalidade}}</td>
                                 <td>R$ &nbsp;{{$renova->valor_renovacao}}</td>
-                                <td>{{$renova->data}}</td>
+                                <td>{{$renova->data_r}}</td>
+                                <td>{{$renova->data_a}}</td>
                                 <td>{{$renova->atendente}}</td>
                                 <td>{{$renova->rastreador}}</td>
                                 <td>{{$renova->status}}</td>
@@ -108,13 +112,6 @@
                 </div>
             </div>
         </div>
-    
-        @if( isset($dataForm) )
-        {!! $renovar->appends($dataForm)->links() !!}
-        @else
-        {!! $renovar->links() !!}
-        @endif
-
 
     </div>
 

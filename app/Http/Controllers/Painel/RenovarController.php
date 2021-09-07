@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Painel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Renovar;
+use App\Models\User;
+use App\Models\Filial;
 use App\Http\Requests\Painel\RenovarFormRequest;
 
 class RenovarController extends Controller
 {
-    private $renovar, $totalPage = 15;
+    private $renovar, $totalPage = 100;
     private $request;
 
 
@@ -22,8 +24,8 @@ class RenovarController extends Controller
 
     public function index(){
 
-        $title = "Pagina de Renovação";
-        
+        $title = "Pagina de Renovação"; 
+
         $renovar = $this->renovar->paginate($this->totalPage);
 
         return view('Painel.Renovacao.index', compact('title', 'renovar'));
@@ -34,13 +36,17 @@ class RenovarController extends Controller
         
         $title = "Lançar Renovação";
         
-        return view('Painel.Renovacao.create-edit', compact('title'));
+        $filial = Filial::get()->pluck('name', 'name');
+        
+        return view('Painel.Renovacao.create-edit', compact('title', 'filial'));
         
     }
     
     public function store(RenovarFormRequest $request) {
 
         $dataRenovar = $request->all();
+        
+        $dataRenovar['users_id'] = auth()->user()->id;
 
         $insert = $this->renovar->create($dataRenovar);
 
@@ -71,13 +77,17 @@ class RenovarController extends Controller
         $title = "Editar Lançamento";
 
         $renovar = $this->renovar->find($id);
+        
+        $filial = Filial::get()->pluck('name', 'name');
 
-        return view('Painel.Renovacao.create-edit', compact('title', 'renovar'));
+        return view('Painel.Renovacao.create-edit', compact('title', 'renovar', 'filial'));
     }
     
     public function update(RenovarFormRequest $request, $id) {
 
         $dataRenovar = $request->all();
+        
+        $dataRenovar['users_id'] = auth()->user()->id;
 
         $renovar = $this->renovar->find($id);
 
@@ -122,7 +132,8 @@ class RenovarController extends Controller
 
         $renovar = $this->renovar
                 ->where('associado', 'LIKE', "%{$dataForm['key-search']}%")
-                ->orWhere('data', $dataForm['key-search'])                        
+                ->orWhere('data_r', $dataForm['key-search'])
+                ->orWhere('data_a', $dataForm['key-search'])         
                 ->orWhere('placa', $dataForm['key-search'])
                 ->orWhere('status', $dataForm['key-search'])
                 ->paginate($this->totalPage);

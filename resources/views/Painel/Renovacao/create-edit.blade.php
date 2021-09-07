@@ -64,16 +64,17 @@
                                 <label>Associado</label>
                                 {!! Form::text('associado', null, ['placeholder' => 'Associado:', 'class' => 'form-control'])!!}
                             </div>
-                            <div class="form-group col-md-3 col-xl-3">    
+                            
+                            <div class="form-group col-md-3 col-xl-3">      
 
-                                <label>Placa</label>
-                                {!! Form::text('placa', null, ['placeholder' => 'Placa:', 'class' => 'form-control'])!!}
+                                <label>Data Renovação</label>
+                                {!! Form::date('data_r', null, ['placeholder' => 'Data da Renovação:', 'class' => 'form-control'])!!}
 
                             </div>
                             <div class="form-group col-md-3 col-xl-3">      
 
-                                <label>Data</label>
-                                {!! Form::date('data', null, ['placeholder' => 'Data:', 'class' => 'form-control'])!!}
+                                <label>Data do Atendimento</label>
+                                {!! Form::date('data_a', null, ['placeholder' => 'Data do Atendimento:', 'class' => 'form-control'])!!}
 
                             </div>
                             <div class="form-group col-md-3 col-xl-3">      
@@ -89,12 +90,18 @@
                                 {!! Form::number('valor_renovacao', null, ['placeholder' => 'Valor R$:', 'class' => 'form-control',  'step' => 0.01, 
                                 'id' => 'valor_acordo'])!!}
                             </div>
+                            <div class="form-group col-md-3 col-xl-3">    
+
+                                <label>Placa</label>
+                                {!! Form::text('placa', null, ['placeholder' => 'Placa:', 'class' => 'form-control'])!!}
+
+                            </div>
                         </div>
                         <div class="form-group col-md-12 col-xl-12">
                             <div class="form-group col-md-6 col-xl-6">      
 
-                                <label>Atendente</label>
-                                {!! Form::text('atendente', null, ['placeholder' => 'Atendente:', 'class' => 'form-control'])!!}
+                                <label>Atendente</label><br>
+                                {!! Form::select('atendente', $filial, ['placeholder' => 'Escolha a Sua Filial:', 'class' => 'form-control'])!!}
 
                             </div>
                             <div class="form-group col-md-3 col-xl-3">      
@@ -108,7 +115,9 @@
 
                                 <label>Status</label><br>
                                 {!! Form::select('status', ['placeholder' => 'Escolha uma Opção', 
-                                'RENOVADO' => 'RENOVADO', 'A RENOVAR'=>'A RENOVAR'])
+                                'RENOVADO' => 'RENOVADO', 'A RENOVAR'=>'A RENOVAR', 
+                                'AGUARDANDO' => 'AGUARDANDO', 'CANCELADO' => 'CANCELADO', 
+                                'SEM CONTATO' => 'SEM CONTATO'])
                                 !!}
 
                             </div>

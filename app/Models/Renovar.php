@@ -8,8 +8,8 @@ class Renovar extends Model
 {
     protected $fillable = [
         
-        'associado', 'placa', 'valor_mensalidade', 
-        'valor_renovacao', 'status', 'data', 
+        'users_id','associado', 'placa', 'valor_mensalidade', 
+        'valor_renovacao', 'status', 'data_r', 'data_a', 
         'atendente', 'rastreador', 'observacao'
     ];
 }

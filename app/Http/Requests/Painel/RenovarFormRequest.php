@@ -30,8 +30,9 @@ class RenovarFormRequest extends FormRequest
                 'placa'             => 'required',
                 'valor_mensalidade' => 'required|min:3|max:150',
                 'valor_renovacao'   => 'required|min:3|max:150',
-                'status'            => 'required|min:3|max:9',
-                'data'              => 'required',
+                'status'            => 'required|min:3|max:15',
+                'data_r'            => 'required',
+                'data_a'            => 'required',
                 'atendente'         => 'required|min:3|max:150',
                 'rastreador'        => 'required|min:3|max:3',
        
